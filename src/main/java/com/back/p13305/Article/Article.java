@@ -24,5 +24,6 @@ public class Article {
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
+        this.createdDate = LocalDateTime.now();
     }
 }

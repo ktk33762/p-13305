@@ -9,6 +9,7 @@
 
 <p><strong>제목 : </strong><span th:text="${article.title}"></span></p>
 <p><strong>내용 : </strong><span th:text="${article.content}"></span></p>
+<p><strong>등록 일시 : </strong><span th:text="${#temporals.format(article.createdDate, 'yyyy-MM-dd HH:mm:ss')}"></span></p>
 
 <a href="/article/list"><button>목록</button></a>
 </body>
