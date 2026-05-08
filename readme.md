@@ -13,12 +13,12 @@
 - GET과 POST 요청의 차이를 이해하고, 등록 폼에서는 `method="post"`를 사용해야 DB에 데이터가 저장된다는 것을 파악하는 데 시간이 걸렸습니다.
 
 ## UI/UX (화면 캡처본을 복사 붙여 넣기, url 주소 나오도록)
-- 게시글 리스트 페이지
--![img_3.png](img_3.png)
+- 게시글 리스트 페이지 
+![img_3.png](img_3.png)
 - 게시글 등록 폼 페이지
-- ![img_1.png](img_1.png)
+![img_1.png](img_1.png)
 - 게시글 상세 페이지
-- ![img_2.png](img_2.png)
+![img_2.png](img_2.png)
 
 ## MVC 패턴
 - ArticleController는 사용자의 요청을 받아 적절한 응답을 반환하는 Controller 역할을 담당
