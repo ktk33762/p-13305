@@ -3,6 +3,8 @@ package com.back.p13305.Article;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ArticleController {
@@ -26,5 +28,12 @@ public class ArticleController {
     @GetMapping("/article/create")
     public String createForm() {
         return "article/create";
+    }
+
+    @PostMapping("/article/create")
+    public String create(@RequestParam String title,
+                         @RequestParam String content) {
+        articleService.create(title, content);
+        return "redirect:/article/list";
     }
 }
