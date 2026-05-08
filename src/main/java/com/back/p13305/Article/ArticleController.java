@@ -22,4 +22,9 @@ public class ArticleController {
         model.addAttribute("articles", articleService.findAll());
         return "article/list";
     }
+
+    @GetMapping("/article/create")
+    public String createForm() {
+        return "article/create";
+    }
 }
