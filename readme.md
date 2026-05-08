@@ -21,14 +21,26 @@
 - ![img_2.png](img_2.png)
 
 ## MVC 패턴
-- 이번 프로젝트에서 MVC 패턴을 적용했습니다. 
-ArticleController는 사용자의 요청을 받아 적절한 응답을 반환하는 Controller 역할을 담당하고, Article은 DB 테이블과 매핑되는 Model 역할을 담당합니다. list.html, create.html, detail.html은 사용자에게 화면을 보여주는 View 역할을 담당합니다. Controller는 요청/응답만 처리하고 비즈니스 로직은 ArticleService에 위임함으로써 역할을 명확하게 분리했습니다.
+- ArticleController는 사용자의 요청을 받아 적절한 응답을 반환하는 Controller 역할을 담당
+- Article은 DB 테이블과 매핑되는 Model 역할을 담당
+- list.html, create.html, detail.html은 사용자에게 화면을 보여주는 View 역할을 담당
+- Controller는 요청/응답만 처리하고 비즈니스 로직은 ArticleService에 위임함으로써 역할을 명확하게 분리했습니다.
 
 ## 스프링에서 의존성 주입(DI) 방법 3가지 방법
-- ...
+- 생성자 주입 
+  - 생성자를 통해 의존 객체를 주입받는 방식으로 스프링에서 가장 권장하는 방식.
+- 필드 주입 
+  - `@Autowired`를 필드에 직접 붙이는 방식으로 코드가 간결하지만 테스트가 어려움.
+- Setter 주입 
+  - Setter 메서드를 통해 의존 객체를 주입받는 방식으로 선택적 의존성에 사용.
 
 ## JPA의 장점과 단점
-- ...
+- 장점
+  - SQL을 직접 작성하지 않아도 save(), findAll(), findById() 같은 메서드로 DB를 다룰 수 있어 생산성이 높습니다.
+  - 특정 DB에 종속되지 않아 MySQL, Oracle 등 DB를 교체해도 코드 변경이 거의 없습니다.
+- 단점
+  - 복잡한 쿼리를 작성할 때 JPQL이나 Native Query를 사용해야 하며, 이 경우 SQL을 직접 작성해야 하는 상황이 발생할 수 있습니다.
+  - JPA의 추상화로 인해 성능 최적화가 어려울 수 있으며, 대량의 데이터를 처리할 때는 주의가 필요합니다.
 
 ## HTTP GET 요청과 POST 요청의 차이
 - GET 요청
